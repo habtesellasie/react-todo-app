@@ -1,7 +1,8 @@
 {
   "short_name": "React todo app",
   "name": "todo app",
-  "icons": [
+  "lang": "eng",
+  "icon": [
     {
       "src": "todo-icon.jpeg",
       "sizes": "512x512",
