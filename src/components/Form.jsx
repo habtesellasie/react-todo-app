@@ -10,6 +10,8 @@ const Form = ({ onSubmit, value, setValue }) => {
         minLength={3}
         maxLength={50}
         required
+        aria-label="todo input"
+        name="todo input"
       />
       <button className="button">ADD</button>
     </form>

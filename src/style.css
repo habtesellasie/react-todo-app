@@ -46,6 +46,9 @@ input {
   width: clamp(250px, 16px + 4vw, 500px);
   color: white;
   font-size: clamp(16px, 16px + 1vw, 22px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -96,9 +99,9 @@ input {
   }
 }
 
-ul {
+ol {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
   padding: 1rem 0;
@@ -107,12 +110,12 @@ ul {
 li {
   width: 100%;
   display: flex;
+  list-style-type: disc;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
   border-bottom: dodgerblue dashed;
   animation: slide-in 0.3s linear 1 forwards;
-  /* transform: translateY(-20px); */
 }
 
 @keyframes slide-in {
@@ -122,6 +125,69 @@ li {
   to {
     transform: translateY(0px);
   }
+}
+
+.edit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin: 0;
+  width: 100%;
+}
+
+.edit-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: solid rgb(255, 255, 255);
+}
+
+button {
+  cursor: pointer;
+}
+
+.edit-container input {
+  border: none;
+  border-bottom: solid rgb(140, 205, 245);
+  border-radius: unset;
+  margin-right: auto;
+  padding: 2px;
+  font-size: clamp(16px, 10px + 1vw, 22px);
+}
+
+.save-btn {
+  color: rgb(140, 205, 245);
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  display: flex;
+  transition: 0.4s ease;
+}
+
+.save-btn:hover {
+  color: rgb(0, 157, 255);
+}
+
+.edit-btn {
+  color: rgb(0, 157, 255) !important;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  font-size: 22px;
+  border: none;
+  display: flex;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  scale: 1.1;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .action-btns {
@@ -136,13 +202,17 @@ li {
   border: none;
   display: flex;
   padding: 2px;
-  color: greenyellow;
+  color: rgb(0, 208, 255);
   background-color: transparent;
   cursor: pointer;
 }
 
+.checked-check {
+  color: rgb(3, 142, 173);
+}
+
 .action-btns button:last-child {
-  color: red;
+  color: rgb(217, 54, 54);
 }
 
 .checked {

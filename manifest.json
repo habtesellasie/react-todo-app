@@ -1,0 +1,15 @@
+{
+  "short_name": "React todo app",
+  "name": "todo app",
+  "icons": [
+    {
+      "src": "todo-icon.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#469acefa",
+  "background_color": "#000418"
+}

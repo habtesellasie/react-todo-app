@@ -35,6 +35,14 @@ function App() {
     setTodoValues(newTodos);
   };
 
+  const updateTodo = (id, newValue) => {
+    setTodoValues((prev) =>
+      prev.map((todo) =>
+        todo.id === id ? { ...todo, todoVal: newValue } : todo
+      )
+    );
+  };
+
   return (
     <>
       <Header>
@@ -42,9 +50,11 @@ function App() {
       </Header>
 
       <Main>
-        <ul>
+        <ol>
           {todoValues.length === 0 ? (
-            <p style={{ textAlign: "center" }}>Todo lists you add apear here</p>
+            <p style={{ textAlign: "center" }}>
+              Todo lists you add apear here &nbsp;. . .
+            </p>
           ) : (
             todoValues.map((todo) => {
               return (
@@ -53,11 +63,12 @@ function App() {
                   {...todo}
                   setChecked={setChecked}
                   removeTodo={deleteTodo}
+                  updateTodo={updateTodo}
                 />
               );
             })
           )}
-        </ul>
+        </ol>
       </Main>
       {todoValues.length > 13 && (
         <div className="scrolldown-btn">
