@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000418;
+  color: white;
+  font-family: "Karla", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(
+    to right bottom,
+    #131313 30%,
+    rgba(70, 154, 206, 0.98) 80%
+  );
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+h1 {
+  color: transparent;
+  background: linear-gradient(to right, rgba(70, 154, 206, 0.98) 30%, white);
+  font-size: clamp(1.5rem, 16px + 2vw, 2.4rem);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+input {
+  background-color: transparent;
+  padding: 5px;
+  border: solid rgb(255, 255, 255);
+  border-radius: 5px;
+  width: clamp(250px, 16px + 4vw, 500px);
+  color: white;
+  font-size: clamp(16px, 16px + 1vw, 22px);
+}
+
+.button {
+  padding: 0 10px;
+  background-color: #000418;
+  border-radius: 5px;
+  color: white;
+  border: solid rgba(255, 255, 255);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: #000418;
+  color: #000418;
+  background-color: rgba(255, 255, 255);
+}
+
+.container {
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+  margin-top: 2rem;
+  max-height: 600px;
+  overflow: scroll;
+}
+
+.scrolldown-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 10px 0;
+  animation: pop 1s ease 2 backwards;
+  transition: all 0.2s ease;
+  cursor: not-allowed;
+}
+
+@keyframes pop {
+  from {
+    transform: translateY(0);
+    transition: all 0.6s ease;
+  }
+
+  to {
+    transform: translateY(10px);
+    transition: all 0.6s ease;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 1rem 0;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: dodgerblue dashed;
+  animation: slide-in 0.3s linear 1 forwards;
+  /* transform: translateY(-20px); */
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.action-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btns button {
+  font-size: 20px;
+  border: none;
+  display: flex;
+  padding: 2px;
+  color: greenyellow;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.action-btns button:last-child {
+  color: red;
+}
+
+.checked {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.content {
+  font-size: clamp(16px, 10px + 1vw, 22px);
+  transition: 0.2s linear;
+}
